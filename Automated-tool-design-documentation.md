@@ -22,7 +22,7 @@
 ### 2、系统体系结构
 
 #####  2.1 整体框架图
-![https://gitdojo.gz.cvte.cn/zhangyi/spirent-automated-testing-tool/raw/master/Image/Overall_framework.png]
+![https://github.com/zhangyi-13572252156/Spirent-automated-testing-tool/raw/master/Image/Overall_framework.png]
 - 大概解释一下，PC1和PC2是一组，PC3和PC4是一组。他们分别有发送端和接收端，都连接在ATC网络上。控制思博伦工具的PC 也连接在ATC网络上。并且PC1、PC2、PC3、PC4上分别运行一个server，用来获取ATC网络的token。控制思博伦工具的PC 有一个client，用来拿到token，之后进行控制他们的网损。
 - 脚本运行在Spirent PC上，当设置好网损之后，进行配置思博伦软件的环境。就绪之后就可以测试了。
 
@@ -55,7 +55,7 @@
 4. 接下来就可以在一对测试 PC 之间打开云会议或者teams，进行共享桌面或者视频会议。
 5. 接下来需要设置我们要测试的网损case。我们新建一个execl表格，如下图所示，按照下图格式来填写数据。第一列'session_name'是生成结果报告的execl 命名。up_bandwidth是上行带宽，up_delay 是上行延时，up_jitter是上行抖动，up_loss是上行丢包率，意down开头的是下行的参数。
   - 注意：session_name名字不可以相同。
-![https://gitdojo.gz.cvte.cn/zhangyi/spirent-automated-testing-tool/raw/master/Image/case_atc_execl.png]
+![https://github.com/zhangyi-13572252156/Spirent-automated-testing-tool/raw/master/Image/case_atc_execl.png]
 - 再SpirentPC 上启动 Spirent Umetrix Video.
 - 接下来我们就可以在Spirent PC 上启动脚本。需要我们输入几个数值。帧率、测试时长（分、秒）、两台测试PC的 IP 和port、存放case的execl 表格的地址、结果报告导出的位置地址、用于全参考所采集的视频地址（注意：这两个地址的分隔符必须是双斜杠）。
 - 启动之后我们就可以在一边喝茶了，结果报告execl会自动生成到自己填的位置。
